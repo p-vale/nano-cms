@@ -45,7 +45,7 @@ switch ( $action ) {
         }
         $all_posts = get_all_posts();
 
-        require 'templates\list-psts.php';
+        require 'templates\list-posts.php';
         break;
     }
     default: {

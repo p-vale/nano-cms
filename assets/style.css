@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
+}
+
+BODY::-webkit-scrollbar {
+    display: none;
+}
+
+header, footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    padding: 15px;
+    margin-bottom: 30px;
+    top: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+header > nav > ul > li > a {
+    color: white;
+}
+header > nav > ul > li > a:hover {
+    box-shadow: none;
+    color: rgb(255, 191, 0);
+}
+
+
+footer {
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+.sticky + main {
+    padding-top: 102px;
+}
+
+main {
+    max-width: 900px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.main-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+hr {
+    border-top: 3px double black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    box-shadow: inset 0 -0.4em 0 0 rgb(255, 191, 0);
+}
+
+h1, h2, p, a, li, td, label {
+    font-family: sans-serif;
+}
+
+p {
+    line-height: 150%;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.post-date {
+    line-height: 0%;
+    font-size: 13px;
+}
+
+.login-fieldset {
+    max-width: 400px;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+input {
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+input:focus {
+    outline: none;
+    background-color: rgb(255, 230, 155);
+}
+
+input[type=submit] {
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(255, 191, 0);
+}
+
+textarea {
+    margin-top: 5px;
+    border: none;
+    padding: 10px;
+    min-height: 500px;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: rgb(241, 241, 241);
+}
+
+table {
+    width: 600px;
+    margin: 15px;
+    border-collapse: collapse;
+}
+
+tr {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+td {
+    padding-top: 20px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.success {
+    width: 600px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(255, 230, 155);
+    border: 1px solid rgb(255, 191, 0);
+}
+
+.home-p {
+    padding: 40px;
+    margin-bottom: 100px;
+}

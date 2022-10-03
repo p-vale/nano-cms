@@ -1,5 +1,6 @@
-<?php
-require('init.php');
+<?php 
+require( 'init.php' );
+require('templates/head.php');
 
 $all_posts = get_all_posts();
 $post_found = false;
@@ -19,18 +20,13 @@ function makedate($d) {
 ?>
 
 <?php require( __DIR__ . '/templates/header.php' ); ?>
-  <main>
-    <?php if ( isset( $_GET['success'] ) ): ?>
-      <div class="success">
-        <p>New post created</p>
-      </div>
-    <?php endif; ?>
+  <main class="main-blog">
     <?php foreach ($all_posts as $post): ?>
       <article>
-        <?php if ( $post_found  ): ?>
+        <?php if ( $post_found ): ?>
           <div class='meta'>
             <h2><?php echo $post['title'] ?></h2>
-            <p><i>published on: 
+            <p class="post-date"><i>published on: 
               <?php echo makedate( $post['published_on'] ); ?>
             </i></p>
           </div>
@@ -38,7 +34,7 @@ function makedate($d) {
         <?php else: ?>
           <div class='meta'>
           <h2><a href="?view=<?php echo $post['id'] ?>"><?php echo $post['title'] ?></a></h2>
-            <p><i>published on: 
+            <p class="post-date"><i>published on: 
               <?php echo makedate( $post['published_on'] ); ?>
             </i></p>
           </div>
@@ -48,4 +44,5 @@ function makedate($d) {
       <hr>
     <?php endforeach; ?>
   </main>
+  <script src="<?php echo SITE_URL ;?>/assets/sticky.js"></script>
 <?php require('templates/footer.php'); ?>

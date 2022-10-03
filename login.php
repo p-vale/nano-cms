@@ -1,5 +1,6 @@
 <?php 
 require( 'init.php' );
+require('templates/head.php');
 
 $error = false;
 
@@ -24,17 +25,19 @@ if ( is_logged_in() ) { // session_start & function in init.php
 <?php endif; ?>
 
 <form action="" method="post">
-	<label for="username">Username</label>
-	<input type="text" name="username" id="username">
+	<fieldset class="login-fieldset">
+		<label for="username">Username</label>
+		<input type="text" name="username" id="username">
+	</fieldset>
 
-	<label for="password">Password</label>
-	<input type="password" name="password" id="password">
-
+	<fieldset class="login-fieldset">
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password">
+	</fieldset>
+	
 	<input type="hidden" name="hash" value="<?php echo htmlspecialchars( generate_hash( 'login' ), ENT_QUOTES ); ?>">
 
-	<p>
-		<input type="submit" name="submit-login" value="Login">
-	</p>
+	<input type="submit" name="submit-login" value="Login">
 </form>
 
-<?php require( 'templates/footer.php' ); ?>
+<?php require('templates/footer.php'); ?>
