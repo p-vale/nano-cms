@@ -16,19 +16,9 @@ function makedate($d) {
   return $date->format('d M Y');
 }
 
-if ( isset( $_GET['delete-post'] ) ) {
-  $id = $_GET['delete-post'];
-  if ( check_hash( 'delete-post-' . $id, $_get['hash'] ) ) { // check cross-site forgery
-    die( 'invalid request' );
-  }
-  delete_post( $id );
-  redirect_to( 'blog.php' );
-  die();
-}
-
 ?>
 
-<?php require('templates/header.php'); ?>
+<?php require( __DIR__ . '/templates/header.php' ); ?>
   <main>
     <?php if ( isset( $_GET['success'] ) ): ?>
       <div class="success">
@@ -54,13 +44,6 @@ if ( isset( $_GET['delete-post'] ) ) {
           </div>
           <p><?php echo $post['excerpt'] ?></p>
         <?php endif; ?>
-        <div class="delete-post">
-          <a 
-            href="?delete-post=<?php echo $post['id']; ?>
-            &hash=<?php echo generate_hash( 'delete-post-' . $post['id'] ); ?>"
-            >Delete post
-          </a>
-        </div>
       </article>
       <hr>
     <?php endforeach; ?>

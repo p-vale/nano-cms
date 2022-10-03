@@ -1,5 +1,5 @@
 <?php
-if ( ! file_exists( 'config.php' ) ) {
+if ( ! file_exists( __DIR__ . '/config.php' ) ) {
     die('ERROR: There is no configuration file');
 }
 require('config.php');
