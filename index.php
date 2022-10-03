@@ -3,7 +3,10 @@ require( 'init.php' );
 require('templates/head-home.php');
 ?>
 <div id="hero">
-    <h1>Welcome to this blog</h1>
+    <div id="slide-black"></div>
+    <div id="circle-white"></div>
+    <div id="final-yellow"></div>
+    <h1 id="title">nanoCMS</h1>
 </div>
 <?php require('templates/header.php'); ?>
     <p class="home-p">
