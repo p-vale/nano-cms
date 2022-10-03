@@ -17,3 +17,10 @@ if ($app_db === false ) {
 // CONNECT TO HELPERS
 require('inc/posts.php');
 require('inc/helpers.php');
+
+// SESSION
+session_start();
+
+if ( isset( $_GET['logout'] ) ) {
+    logout();
+}
