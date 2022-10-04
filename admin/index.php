@@ -40,7 +40,7 @@ switch ( $action ) {
                 die( 'invalid request' );
             }
             delete_post( $id );
-            redirect_to( 'admin?action=list-posts&success=true' );
+            redirect_to( 'admin?action=list-posts&delete=true' );
             die();
         }
         $all_posts = get_all_posts();

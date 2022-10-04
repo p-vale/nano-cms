@@ -8,6 +8,10 @@ require __DIR__ . '/../../templates/header.php';
         <div class="success">
             Post created successfully
         </div>
+    <?php elseif ( isset( $_GET['delete'] ) ): ?>
+        <div class="success">
+            Post deleted successfully
+        </div>
     <?php endif; ?>
     <h2>List of posts</h2>
     <table>
